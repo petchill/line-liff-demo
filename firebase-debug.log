@@ -1,0 +1,157 @@
+[debug] [2021-03-11T08:35:02.549Z] ----------------------------------------------------------------------
+[debug] [2021-03-11T08:35:02.553Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-03-11T08:35:02.553Z] CLI Version:   9.6.0
+[debug] [2021-03-11T08:35:02.553Z] Platform:      linux
+[debug] [2021-03-11T08:35:02.554Z] Node Version:  v10.19.0
+[debug] [2021-03-11T08:35:02.554Z] Time:          Thu Mar 11 2021 15:35:02 GMT+0700 (Indochina Time)
+[debug] [2021-03-11T08:35:02.554Z] ----------------------------------------------------------------------
+[debug] [2021-03-11T08:35:02.555Z] 
+[debug] [2021-03-11T08:35:02.566Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-11T08:35:02.566Z] > authorizing via signed-in user
+[debug] [2021-03-11T08:35:02.566Z] [iam] checking project line-liff-demo-9fe4f for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-11T08:35:02.570Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/line-liff-demo-9fe4f:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-03-11T08:35:03.780Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 11 Mar 2021 08:35:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1011","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:03.783Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/line-liff-demo-9fe4f/serviceAccounts/line-liff-demo-9fe4f@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-03-11T08:35:05.154Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 11 Mar 2021 08:35:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:05.157Z] > refreshing access token with scopes: []
+[debug] [2021-03-11T08:35:05.158Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-11T08:35:05.323Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 11 Mar 2021 08:35:05 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:05.331Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/line-liff-demo-9fe4f [none]
+[debug] [2021-03-11T08:35:05.836Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/line-liff-demo-9fe4f 200
+[debug] [2021-03-11T08:35:05.836Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/line-liff-demo-9fe4f {"projectId":"line-liff-demo-9fe4f","projectNumber":"781462573275","displayName":"line-liff-demo","name":"projects/line-liff-demo-9fe4f","resources":{"hostingSite":"line-liff-demo-9fe4f","realtimeDatabaseInstance":"line-liff-demo-9fe4f-default-rtdb"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'line-liff-demo-9fe4f'...
+[info] 
+[info] i  deploying functions, hosting 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2021-03-11T08:35:11.040Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-11T08:35:11.041Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-11T08:35:11.042Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-11T08:35:11.042Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-03-11T08:35:11.044Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-11T08:35:11.044Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-11T08:35:11.166Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Thu, 11 Mar 2021 08:35:11 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:11.172Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/line-liff-demo-9fe4f/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-03-11T08:35:11.175Z] <<< HTTP RESPONSE 200 {"date":"Thu, 11 Mar 2021 08:35:11 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:11.179Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/line-liff-demo-9fe4f/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-03-11T08:35:11.181Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 11 Mar 2021 08:35:11 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:11.185Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/line-liff-demo-9fe4f/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-03-11T08:35:12.709Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 11 Mar 2021 08:35:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:12.757Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 11 Mar 2021 08:35:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-03-11T08:35:12.792Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 11 Mar 2021 08:35:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-03-11T08:35:12.793Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/line-liff-demo-9fe4f/adminSdkConfig  
+ 
+[debug] [2021-03-11T08:35:13.410Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 11 Mar 2021 08:35:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: preparing functions directory for uploading... 
+[debug] [2021-03-11T08:35:13.412Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/line-liff-demo-9fe4f/configs  
+ 
+[debug] [2021-03-11T08:35:15.142Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 11 Mar 2021 08:35:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:15.901Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-03-11T08:35:15.906Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/line-liff-demo-9fe4f/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-03-11T08:35:17.755Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 11 Mar 2021 08:35:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:17.757Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/line-liff-demo-9fe4f/locations/-/functions  
+ 
+[debug] [2021-03-11T08:35:18.521Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 11 Mar 2021 08:35:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[line-liff-demo-9fe4f]: beginning deploy... 
+[info] i  hosting[line-liff-demo-9fe4f]: found 20 files in build 
+[debug] [2021-03-11T08:35:18.540Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2021-03-11T08:35:18.647Z] > refreshing access token with scopes: []
+[debug] [2021-03-11T08:35:18.647Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-11T08:35:18.649Z] [hosting] hash cache [YnVpbGQ] stored for 20 files
+[debug] [2021-03-11T08:35:18.650Z] [hosting][hash queue][FINAL] {"max":100,"min":15,"avg":20.2,"active":0,"complete":20,"success":20,"errored":0,"retried":0,"total":20,"elapsed":109}
+[debug] [2021-03-11T08:35:18.766Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 11 Mar 2021 08:35:18 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-11T08:35:18.771Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a:populateFiles [none]
+[debug] [2021-03-11T08:35:18.771Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a:populateFiles {"files":{"/404.html":"b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537","/asset-manifest.json":"3594d7e6e371744a657577baac0447b92d028220ad41cb772490d0f8bd380f1f","/favicon.ico":"c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","/index.html":"ac550b0246a4e23af5b4115f6fb4d55c3e6451a9ce8faa5261c11a9f05167d94","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/static/css/main.9d5b29c0.chunk.css":"e61057b76ea343b23d413fe22e291ff68db4f471899d66451b9a805245396aaa","/static/css/main.9d5b29c0.chunk.css.map":"a6638cd8724b42ec187bb7db537204fbafc86dd91f0adda1bd4d603701ba9b85","/static/js/2.07a9553a.chunk.js.LICENSE.txt":"324458ff0719270e8f72bb07e89d4726ab19b33c117f8521577322151399fba4","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/static/js/3.22c9f037.chunk.js":"d29eb178334f284ab2ddc02e86208a291105644ae43a6c0b1c61cfc8a629fd69","/static/js/main.85859c65.chunk.js":"e3e4be71c810283278914318b28b8163e76dc42b0e1efb3525e381651483c480","/static/js/main.85859c65.chunk.js.map":"31b024222006917e0379f1612eddda8f8b395e343f7dcc26666360189dd50e6e","/static/js/runtime-main.21d7caf2.js":"bad48a1eb6f74202c26665ab3b6a0506c92558f53eb76972097f9a36d2c0e03d","/static/js/3.22c9f037.chunk.js.map":"2c5737d1901781b2d3fe9d6b9ccf292b2ca5ee3bee2f2994414046314da694f5","/static/media/logo.6ce24c58.svg":"7d3ee40656c5a13fa0b04821777c1ba40bd028faa5c0e7475f61021d03fd35d6","/static/js/runtime-main.21d7caf2.js.map":"618fe517fb839fa6bf2c425cef4a99da5afba8b2f64c60e8fd23d3826c77c7b8","/static/js/2.07a9553a.chunk.js":"26f71e0c01ccda1b1ef37100bd122f47929498327965d6034f381e64bf323a24","/static/js/2.07a9553a.chunk.js.map":"1fbe777abd15a253779d3737b5b414eab3f51bcf8fb7f7d791790d99eec84c60"}}
+[debug] [2021-03-11T08:35:20.161Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a:populateFiles 200
+[debug] [2021-03-11T08:35:20.161Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a:populateFiles {"uploadRequiredHashes":["31b024222006917e0379f1612eddda8f8b395e343f7dcc26666360189dd50e6e","26f71e0c01ccda1b1ef37100bd122f47929498327965d6034f381e64bf323a24","d29eb178334f284ab2ddc02e86208a291105644ae43a6c0b1c61cfc8a629fd69","2c5737d1901781b2d3fe9d6b9ccf292b2ca5ee3bee2f2994414046314da694f5","e3e4be71c810283278914318b28b8163e76dc42b0e1efb3525e381651483c480","3594d7e6e371744a657577baac0447b92d028220ad41cb772490d0f8bd380f1f","bad48a1eb6f74202c26665ab3b6a0506c92558f53eb76972097f9a36d2c0e03d","1fbe777abd15a253779d3737b5b414eab3f51bcf8fb7f7d791790d99eec84c60","ac550b0246a4e23af5b4115f6fb4d55c3e6451a9ce8faa5261c11a9f05167d94","618fe517fb839fa6bf2c425cef4a99da5afba8b2f64c60e8fd23d3826c77c7b8","b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files"}
+[debug] [2021-03-11T08:35:20.167Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/31b024222006917e0379f1612eddda8f8b395e343f7dcc26666360189dd50e6e [none]
+[debug] [2021-03-11T08:35:20.167Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/31b024222006917e0379f1612eddda8f8b395e343f7dcc26666360189dd50e6e [stream]
+[debug] [2021-03-11T08:35:20.169Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/26f71e0c01ccda1b1ef37100bd122f47929498327965d6034f381e64bf323a24 [none]
+[debug] [2021-03-11T08:35:20.169Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/26f71e0c01ccda1b1ef37100bd122f47929498327965d6034f381e64bf323a24 [stream]
+[debug] [2021-03-11T08:35:20.170Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/d29eb178334f284ab2ddc02e86208a291105644ae43a6c0b1c61cfc8a629fd69 [none]
+[debug] [2021-03-11T08:35:20.170Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/d29eb178334f284ab2ddc02e86208a291105644ae43a6c0b1c61cfc8a629fd69 [stream]
+[debug] [2021-03-11T08:35:20.175Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/2c5737d1901781b2d3fe9d6b9ccf292b2ca5ee3bee2f2994414046314da694f5 [none]
+[debug] [2021-03-11T08:35:20.176Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/2c5737d1901781b2d3fe9d6b9ccf292b2ca5ee3bee2f2994414046314da694f5 [stream]
+[debug] [2021-03-11T08:35:20.177Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/e3e4be71c810283278914318b28b8163e76dc42b0e1efb3525e381651483c480 [none]
+[debug] [2021-03-11T08:35:20.177Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/e3e4be71c810283278914318b28b8163e76dc42b0e1efb3525e381651483c480 [stream]
+[debug] [2021-03-11T08:35:20.178Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/3594d7e6e371744a657577baac0447b92d028220ad41cb772490d0f8bd380f1f [none]
+[debug] [2021-03-11T08:35:20.178Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/3594d7e6e371744a657577baac0447b92d028220ad41cb772490d0f8bd380f1f [stream]
+[debug] [2021-03-11T08:35:20.180Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/bad48a1eb6f74202c26665ab3b6a0506c92558f53eb76972097f9a36d2c0e03d [none]
+[debug] [2021-03-11T08:35:20.180Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/bad48a1eb6f74202c26665ab3b6a0506c92558f53eb76972097f9a36d2c0e03d [stream]
+[debug] [2021-03-11T08:35:20.181Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/1fbe777abd15a253779d3737b5b414eab3f51bcf8fb7f7d791790d99eec84c60 [none]
+[debug] [2021-03-11T08:35:20.181Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/1fbe777abd15a253779d3737b5b414eab3f51bcf8fb7f7d791790d99eec84c60 [stream]
+[debug] [2021-03-11T08:35:20.183Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/ac550b0246a4e23af5b4115f6fb4d55c3e6451a9ce8faa5261c11a9f05167d94 [none]
+[debug] [2021-03-11T08:35:20.183Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/ac550b0246a4e23af5b4115f6fb4d55c3e6451a9ce8faa5261c11a9f05167d94 [stream]
+[debug] [2021-03-11T08:35:20.184Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/618fe517fb839fa6bf2c425cef4a99da5afba8b2f64c60e8fd23d3826c77c7b8 [none]
+[debug] [2021-03-11T08:35:20.184Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/618fe517fb839fa6bf2c425cef4a99da5afba8b2f64c60e8fd23d3826c77c7b8 [stream]
+[debug] [2021-03-11T08:35:20.185Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537 [none]
+[debug] [2021-03-11T08:35:20.185Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537 [stream]
+[debug] [2021-03-11T08:35:20.187Z] [hosting][populate queue][FINAL] {"max":1520,"min":1520,"avg":1520,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1541}
+[debug] [2021-03-11T08:35:20.187Z] [hosting] uploads queued: 11
+[debug] [2021-03-11T08:35:24.151Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/bad48a1eb6f74202c26665ab3b6a0506c92558f53eb76972097f9a36d2c0e03d 200
+[debug] [2021-03-11T08:35:24.151Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/bad48a1eb6f74202c26665ab3b6a0506c92558f53eb76972097f9a36d2c0e03d [stream]
+[debug] [2021-03-11T08:35:24.152Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/618fe517fb839fa6bf2c425cef4a99da5afba8b2f64c60e8fd23d3826c77c7b8 200
+[debug] [2021-03-11T08:35:24.152Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/618fe517fb839fa6bf2c425cef4a99da5afba8b2f64c60e8fd23d3826c77c7b8 [stream]
+[debug] [2021-03-11T08:35:24.154Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/31b024222006917e0379f1612eddda8f8b395e343f7dcc26666360189dd50e6e 200
+[debug] [2021-03-11T08:35:24.154Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/31b024222006917e0379f1612eddda8f8b395e343f7dcc26666360189dd50e6e [stream]
+[debug] [2021-03-11T08:35:24.154Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/1fbe777abd15a253779d3737b5b414eab3f51bcf8fb7f7d791790d99eec84c60 200
+[debug] [2021-03-11T08:35:24.155Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/1fbe777abd15a253779d3737b5b414eab3f51bcf8fb7f7d791790d99eec84c60 [stream]
+[debug] [2021-03-11T08:35:24.191Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/e3e4be71c810283278914318b28b8163e76dc42b0e1efb3525e381651483c480 200
+[debug] [2021-03-11T08:35:24.191Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/e3e4be71c810283278914318b28b8163e76dc42b0e1efb3525e381651483c480 [stream]
+[debug] [2021-03-11T08:35:24.196Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/3594d7e6e371744a657577baac0447b92d028220ad41cb772490d0f8bd380f1f 200
+[debug] [2021-03-11T08:35:24.197Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/3594d7e6e371744a657577baac0447b92d028220ad41cb772490d0f8bd380f1f [stream]
+[debug] [2021-03-11T08:35:24.561Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/26f71e0c01ccda1b1ef37100bd122f47929498327965d6034f381e64bf323a24 200
+[debug] [2021-03-11T08:35:24.561Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/26f71e0c01ccda1b1ef37100bd122f47929498327965d6034f381e64bf323a24 [stream]
+[debug] [2021-03-11T08:35:24.766Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/d29eb178334f284ab2ddc02e86208a291105644ae43a6c0b1c61cfc8a629fd69 200
+[debug] [2021-03-11T08:35:24.766Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/d29eb178334f284ab2ddc02e86208a291105644ae43a6c0b1c61cfc8a629fd69 [stream]
+[debug] [2021-03-11T08:35:24.768Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/2c5737d1901781b2d3fe9d6b9ccf292b2ca5ee3bee2f2994414046314da694f5 200
+[debug] [2021-03-11T08:35:24.769Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/2c5737d1901781b2d3fe9d6b9ccf292b2ca5ee3bee2f2994414046314da694f5 [stream]
+[debug] [2021-03-11T08:35:25.278Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/ac550b0246a4e23af5b4115f6fb4d55c3e6451a9ce8faa5261c11a9f05167d94 200
+[debug] [2021-03-11T08:35:25.278Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/ac550b0246a4e23af5b4115f6fb4d55c3e6451a9ce8faa5261c11a9f05167d94 [stream]
+[debug] [2021-03-11T08:35:25.336Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537 200
+[debug] [2021-03-11T08:35:25.336Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/line-liff-demo-9fe4f/versions/f9f070c503fed27a/files/b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537 [stream]
+[debug] [2021-03-11T08:35:25.336Z] [hosting][upload queue][FINAL] {"max":5170,"min":3986,"avg":4354.636363636364,"active":0,"complete":11,"success":11,"errored":0,"retried":0,"total":11,"elapsed":5174}
+[info] ✔  hosting[line-liff-demo-9fe4f]: file upload complete 
+[debug] [2021-03-11T08:35:25.337Z] [hosting] deploy completed after 6813ms
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	helloWorld(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+
